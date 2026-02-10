@@ -129,7 +129,7 @@ valentine-website/
 ├── photo7.jpg          # Collage photo 7
 ├── photo8.jpg          # Collage photo 8
 │
-├── lily.jpg            # Rose/flower for Gift 1
+├── flower.png            # Rose/flower for Gift 1
 ├── image1.jpg          # Main page photo 1
 ├── image2.jpg          # Main page photo 2
 └── song.mp3            # Background music for Gift 3
