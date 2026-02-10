@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+
+    <div id="intro-screen">
+        <canvas id="treeCanvas"></canvas>
+        <div id="intro-text" class="hidden-text"></div>
+        <div style="position: absolute; bottom: 5%; color: #ffb7b2; font-size: 0.9rem; opacity: 0.7;">Click anywhere to
+            continue</div>
+    </div>
+
+    <div id="main-app" class="hidden">
+        <div class="hearts-bg" id="hearts-bg"></div>
+
+        <section id="page1" class="page active">
+            <div class="container">
+                <img src="image1.jpg" alt="Cute Kitten" class="main-image"
+                    onerror="this.src='https://placekitten.com/300/300'">
+                <h1>Will You Be My Valentine?</h1>
+                <div class="buttons">
+                    <button id="yes-btn">YES, i'm yours!</button>
+                    <button id="no-btn">Noo</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="page2" class="page hidden">
+            <div class="container">
+                <img src="image2.jpg" alt="Kissing Cats" class="main-image"
+                    onerror="this.src='https://placekitten.com/300/301'">
+                <h1 class="yay-text">I Knew You'd Say Yes! 😊</h1>
+                <p style="font-size: 1.5rem; color: #d63384; margin: 20px 0;">I Love You! ❤️</p>
+                <button class="next-btn" id="go-to-gifts">See Your Gifts &rarr;</button>
+            </div>
+        </section>
+
+        <section id="page3" class="page hidden">
+            <div class="container">
+                <h2>Pick a Gift</h2>
+                <div class="gift-grid">
+                    <div class="gift-box" data-gift="gift-rose"><span>🌹</span>
+                        <p>Gift 1</p>
+                    </div>
+                    <div class="gift-box" data-gift="gift-letter"><span>💌</span>
+                        <p>Gift 2</p>
+                    </div>
+                    <div class="gift-box" data-gift="gift-collage"><span>🎵</span>
+                        <p>Gift 3</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="gift-rose" class="gift-fullscreen hidden">
+            <button class="close-btn">✖</button>
+            <div class="rose-container">
+                <div class="rose-display">
+                    <img src="flower.png" alt="rose Bouquet" class="rose-main">
+                </div>
+
+                <div class="note note-1">
+                    <p>.</p>
+                </div>
+                <div class="note note-2">
+                    <p>.</p>
+                </div>
+                <div class="note note-3">
+                    <p>.</p>
+                </div>
+                <div class="note note-4">
+                    <p>.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="gift-letter" class="gift-fullscreen hidden">
+            <button class="close-btn">✖</button>
+            <div class="envelope-container">
+                <div class="envelope">
+                    <div class="wax-seal"></div>
+                    <div class="letter">
+                        <h3>To My Love 💝</h3>
+                        <p>.</p>
+                        <p class="sign">I love you ❤️</p>
+                    </div>
+                </div>
+                <p class="hint">(Tap envelope to open)</p>
+            </div>
+        </div>
+
+        <div id="gift-collage" class="gift-fullscreen hidden">
+            <button class="close-btn close-music">✖</button>
+            <audio id="bg-music" loop>
+                <source src="song.mp3" type="audio/mpeg">
+            </audio>
+            <div class="scrolling-collage">
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+            </div>
+
+            <div class="lyrics-overlay">
+                <div class="scrolling-text">
+                    <p>The night we met I knew I needed you so</p>
+                    <p>And if I had the chance I'd never let you go</p>
+                    <p>So won't you say you love me</p>
+                    <p>I'll make you so proud of me</p>
+                    <p>We'll make 'em turn their heads every place we go</p>
+                    <br>
+                    <p>So won't you, please</p>
+                    <p>(Be my, be my baby)</p>
+                    <p>Be my little baby</p>
+                    <p>(My one and only baby)</p>
+                    <p>Say you'll be my darlin'</p>
+                    <p>(Be my, be my baby)</p>
+                    <p>Be my baby now</p>
+                    <p>(My one and only baby)</p>
+                    <p>Whoa-oh-oh-oh</p>
+                    <p>I'll make you happy, baby, just wait and see</p>
+                    <p>For every kiss you give me, I'll give you three</p>
+                    <p>Oh, since the day I saw you</p>
+                    <p>I have been waiting for you</p>
+                    <p>You know I will adore you 'til eternity</p>
+                    <br>
+                    <p>So won't you, please</p>
+                    <p>(Be my, be my baby)</p>
+                    <p>Be my little baby</p>
+                    <p>(My one and only baby)</p>
+                    <p>Say you'll be my darlin'</p>
+                    <p>(Be my, be my baby)</p>
+                    <p>Be my baby now</p>
+                    <p>(My one and only baby)</p>
+                    <p>Whoa-oh-oh-oh</p>
+                    <br>
+                    <p>So come on and be</p>
+                    <p>(Be my, be my baby)</p>
+                    <p>Be my little baby</p>
+                    <p>(My one and only baby)</p>
+                    <p>Say you'll be my darlin'</p>
+                    <p>(Be my, be my baby)</p>
+                    <p>Be my baby now</p>
+                    <p>(My one and only baby)</p>
+                    <p>Whoa-oh-oh-oh</p>
+                    <br>
+                    <p>(Be my, be my baby)</p>
+                    <p>Be my little baby</p>
+                    <p>(My one and only baby)</p>
+                    <p>Oh, oh, oh</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
